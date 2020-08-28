@@ -1,0 +1,44 @@
+
+    <div class="row">
+      <div class="col-md-12" style="width: 100%">
+        <div class ="ngp-process-bar row">
+          <div class="col-10 ngp-process-completed-step"><span class="sottTitle">
+            <b> Dettaglio SDD </b>
+          </span>
+        </div>
+          <div class="col-2 text-right">
+              <fa-icon 
+                       [icon]="isCollapsed ? faChevronDown : faChevronRight"
+                       (click)="isCollapsed=!isCollapsed"
+                       aria-controls="collapseForm"></fa-icon>
+          </div> 
+        <div *ngIf="isCollapsed">
+DETTAGLIO AF_Funzionalità trasversali
+        </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  
+     <div class="row">    
+  <div class="col-6">
+    <button type="button"class="btn btn-primary ngp-button"><b>Indietro </b></button>
+  </div>
+    <div class="col-6 text-right">
+    <button type="button"class="btn btn-primary ngp-button" onclick="document.getElementById('id01').style.display='block'" [disabled]="causaleValue"><b>Conferma operazione</b></button>
+    <div id="id01" class="modal">
+      <form class="modal-content" action="/action_page.php">
+        <div class="container">
+          <h3>RICHIESTA CONFERMA</h3>
+          <p>Si vuole procedere con il reject del SDD?</p>
+          <div class="clearfix">
+            <button type="button"class="btn btn-primary ngp-button" onclick="document.getElementById('id01').style.display='none'"><b>Annulla</b></button>
+            <button type="button"class="btn btn-primary ngp-button"><b>Conferma</b></button>
+          </div>
+        </div>
+      </form>
+    </div>
+    </div>
+  </div>

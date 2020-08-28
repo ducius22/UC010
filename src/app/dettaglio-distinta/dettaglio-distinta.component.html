@@ -1,0 +1,142 @@
+<div class="row">
+  <div class="col-md-12" style="width: 100%">
+    <div class ="ngp-process-bar">
+      <div class="ngp-process-completed-step"><span class="sottTitle">
+        <b> Dettaglio Distinta </b>
+      </span></div>
+      <i class="ngp-process-step-separator fas fa-angle-right"></i>
+    </div>
+  </div>
+</div>
+  <div class="card-header">
+    <div class="row">
+      <div class="col-10">
+        <b>DATI SOTTO-DISTINTA</b>
+      </div>
+     <div class="col text-right">
+    <fa-icon 
+             [icon]="isCollapsedDatiSottDist ? faChevronDown : faChevronRight"
+             (click)="isCollapsedDatiSottDist = !isCollapsedDatiSottDist"
+             aria-controls="collapseForm"></fa-icon>
+     </div>
+     <div *ngIf="isCollapsedDatiSottDist">
+      <div class="card-body">
+        <table class="table">
+          <thead class="thead-light">
+          <tr>
+            <th> ID distinta</th>
+            <th> ID sotto-distinta</th>
+            <th> Transazioni contenute</th>
+            <th> Tipo incasso</th>
+            <th> Canale</th>
+            <th> Importo totale</th>
+            <th> Data presentazione</th>
+            <th> Data scadenza</th>
+            <th> Creditore</th>
+            <th> ID Creditore</th>
+            <th> Filiale</th>
+          </tr>
+          </thead>
+        </table>
+      </div>
+     </div> 
+    </div>
+  </div>
+  <div class="card-header">
+    <div class="row">
+      <div class="col-10">
+        <b>ELENCO SDD DA RIGETTARE</b>
+      </div>    
+    <div class="col text-right">
+    <fa-icon 
+             [icon]="isCollapsedSddRig ? faChevronDown : faChevronRight"
+             (click)="isCollapsedSddRig = !isCollapsedSddRig"
+             aria-controls="collapseForm"></fa-icon>
+    </div> 
+    <div *ngIf="isCollapsedSddRig">
+      <div class="card-body">
+        <table class="table">
+          <thead class="thead-light">
+          <tr>
+            <th> Numero SDD-TID</th>
+            <th> Tipologia</th>
+            <th> Canale</th>
+            <th> Importo</th>
+            <th> Creditore</th>
+            <th> ID Creditore</th>
+            <th> ID mandato</th>
+            <th> Debitore</th>
+            <th> IBAN Debitore</th>
+            <th> BIC</th>
+            <th> Data scadenza</th>
+            <th> Filiale</th>
+            <th> Stato</th>
+            <th> Azioni</th>
+          </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="card-header">
+    <div class="row">
+      <div class="col-10">
+        <b>ELENCO SDD NON LAVORABILI</b>
+      </div>
+    <div class="col text-right">
+    <fa-icon 
+             [icon]="isCollapsedSddNonLav ? faChevronDown : faChevronRight"
+             (click)="isCollapsedSddNonLav = !isCollapsedSddNonLav"
+             aria-controls="collapseForm"></fa-icon>
+    </div> 
+    <div *ngIf="isCollapsedSddNonLav">
+      <div class="card-body">
+        <table class="table">
+          <thead class="thead-light">
+          <tr>
+            <th> Numero SDD-TID</th>
+            <th> Tipologia</th>
+            <th> Canale</th>
+            <th> Importo</th>
+            <th> Creditore</th>
+            <th> ID Creditore</th>
+            <th> ID mandato</th>
+            <th> Debitore</th>
+            <th> IBAN Debitore</th>
+            <th> BIC</th>
+            <th> Data scadenza</th>
+            <th> Filiale</th>
+            <th> Stato</th>
+            <th> Azioni</th>
+          </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="row">    
+    <div class="col-6">
+      <button type="button"class="btn btn-primary ngp-button"><b>Indietro </b></button>
+    </div>
+      <div class="col-6 text-right">
+      <button type="button"class="btn btn-primary ngp-button" onclick="document.getElementById('id02').style.display='block'"><b>Conferma operazione</b></button>
+      <div id="id02" class="modal">
+        <form class="modal-content" action="/action_page.php">
+          <div class="container">
+            <h3>RICHIESTA CONFERMA</h3>
+            <p>Si vuole procedere con il reject di tutti gli SDD in stato "In uscita"?</p>
+            <div class="clearfix">
+              <button type="button"class="btn btn-primary ngp-button" onclick="document.getElementById('id02').style.display='none'"><b>Annulla</b></button>
+              <button type="button"class="btn btn-primary ngp-button"><b>Conferma</b></button>
+            </div>
+          </div>
+        </form>
+      </div>
+      </div>
+    </div>
+  
+    
+  
+  

@@ -1,0 +1,54 @@
+<div class="ngp-page">
+  <form>
+    <div class="container ngp-card">
+  <div class="row">
+    <div class="col-10">
+      <b>DATI REJECT</b>
+    </div>
+    <div class="col-2 text-right">
+    </div>
+  </div>
+<div class="form-group row">
+  <label for="" class="col-2"> Causale </label>
+  <div class="col-3">
+    <select class="form-control form-control-sm" [(ngModel)]="dati.causaleValue" (ngModelChange)="controlla()" required>
+      <option value="Conto errato">Conto errato</option>
+      <option value="Conto chiuso">Conto chiuso</option>
+      <option value="Conto bloccato">Conto bloccato</option>
+      <option value="Conto consumatore">Conto consumatore</option>
+      <option value="Transazione non ammessa">Transazione non ammessa</option>
+      <option value="Fondi insufficienti">Fondi insufficienti</option>
+      <option value="Duplicazione">Duplicazione</option>
+      <option value="ID creditore non riconosciuto">ID creditore non riconosciuto</option>
+      <option value="Mandato assente o invalido">Mandato assente o invalido</option>
+      <option value="Mandato non riconosciuto">Mandato non riconosciuto</option>
+      <option value="Revoca del singolo SDD">Revoca del singolo SDD</option>
+      <option value="Motivo non specificato">Motivo non specificato</option>
+      <option value="Causale libera">Causale libera</option>
+      <option value="Banca non raggiungibile">Banca non raggiungibile</option>
+      <option value="BIC banca errato">BIC banca errato</option>
+      <option value="Coordinate bancarie errate">Coordinate bancarie errate</option>
+    </select>
+  </div>
+  <label for="" class="col-1"> Data </label>
+  <div class="col-2">
+  <input [value]="currentDate" type="text"  readonly>
+  </div>
+  <div class="col-1"></div>
+  <label for="" class="col-1">Commissioni</label>
+  <div class="col-2">
+  <input id="inputEuro" type="number" readonly > €
+  </div>
+</div>
+
+<div class="form-group row">
+ <label for="" class="col-2">Nota interna</label>
+ <textarea class="col-4" rows="" cols="" ></textarea>
+ <label for=""class="col-2">Nota</label> 
+ <textarea class="col-4" rows="" cols="" required></textarea>
+</div>
+<app-dettaglio-sdd [causaleValue]="dati.causaleValue"></app-dettaglio-sdd>
+<app-dettaglio-distinta></app-dettaglio-distinta>
+</div>
+</form>
+</div>
