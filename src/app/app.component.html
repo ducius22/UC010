@@ -11,7 +11,7 @@
 <div class="form-group row">
   <label for="" class="col-2"> Causale </label>
   <div class="col-3">
-    <select class="form-control form-control-sm" [(ngModel)]="dati.causaleValue" (ngModelChange)="controlla()" required>
+    <select class="form-control form-control-sm"  required>
       <option value="Conto errato">Conto errato</option>
       <option value="Conto chiuso">Conto chiuso</option>
       <option value="Conto bloccato">Conto bloccato</option>
@@ -47,7 +47,7 @@
  <label for=""class="col-2">Nota</label> 
  <textarea class="col-4" rows="" cols="" required></textarea>
 </div>
-<app-dettaglio-sdd [causaleValue]="dati.causaleValue"></app-dettaglio-sdd>
+<app-dettaglio-sdd ></app-dettaglio-sdd>
 <app-dettaglio-distinta></app-dettaglio-distinta>
 </div>
 </form>

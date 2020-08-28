@@ -10,11 +10,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ssduc010';
   currentDate=new Date().toLocaleDateString();
-  causaleValue;
-  dati:{
-    causaleValue:0
-  }
-  controlla = () =>{
-    console.log(this.dati.causaleValue)
-  }
+  
+  
 }

@@ -8,7 +8,7 @@ import {faChevronDown, faChevronRight} from '@fortawesome/free-solid-svg-icons';
 })
 export class DettaglioSDDComponent implements OnInit {
 
-  @Input() causaleValue;
+  
   faChevronRight = faChevronRight;
   faChevronDown = faChevronDown;
   isCollapsed =false;
@@ -18,7 +18,6 @@ export class DettaglioSDDComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.causaleValue)
   }
 
 }
